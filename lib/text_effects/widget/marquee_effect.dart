@@ -112,9 +112,7 @@ class _RevolvingLanternPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     double x = textInfo.head;
-    int i = 0;
     while (x < size.width) {
-      ++i;
       painter.paint(canvas, Offset(x, 0.0));
       x += textInfo.width + textInfo.margin;
     }
