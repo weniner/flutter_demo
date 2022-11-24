@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'windmill//index.dart' as windmill;
+import 'windmill/index.dart' as windmill;
+import 'text_effects/index.dart' as beads;
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const windmill.IndexPage(),
+      home: const beads.IndexPage(),
     );
   }
 }
