@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'windmill/index.dart' as windmill;
 import 'text_effects/index.dart' as beads;
-import 'rainbow//index.dart' as rainbow;
+import 'rainbow/index.dart' as rainbow;
+import 'source/index.dart' as source;
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
       ),
       // home: const windmill.IndexPage(),
       // home: const beads.IndexPage(),
-      home: const rainbow.IndexPage(),
+      // home: const rainbow.IndexPage(),
+      home: const source.IndexPage(),
     );
   }
 }

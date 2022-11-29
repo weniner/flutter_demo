@@ -43,5 +43,7 @@
 	<false/>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>我们需要录音权限转动风车</string>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
 </dict>
 </plist>
