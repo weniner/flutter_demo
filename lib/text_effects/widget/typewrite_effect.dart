@@ -11,6 +11,6 @@ class TypewriterEffect extends StatefulWidget {
 class _TypewriterEffectState extends State<TypewriterEffect> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }

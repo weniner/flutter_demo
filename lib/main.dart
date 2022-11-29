@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'windmill/index.dart' as windmill;
-import 'text_effects/index.dart' as beads;
-import 'rainbow/index.dart' as rainbow;
-import 'source/index.dart' as source;
+import 'package:flutter_demo/router/router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,15 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const windmill.IndexPage(),
-      // home: const beads.IndexPage(),
-      // home: const rainbow.IndexPage(),
-      home: const source.IndexPage(),
+      routerDelegate: router.routerDelegate,
+      routeInformationParser: router.routeInformationParser,
     );
   }
 }

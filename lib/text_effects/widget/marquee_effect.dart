@@ -42,6 +42,9 @@ class _MarqueeEffectState extends State<MarqueeEffect>
     height = _painter.height;
     textInfo = _TextInfo(width, kMargin);
     _scrollController.addListener(_scrollListener);
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      _scrollController.repeat();
+    });
   }
 
   @override
@@ -63,15 +66,19 @@ class _MarqueeEffectState extends State<MarqueeEffect>
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (_, constraints) {
-      return ClipRect(
-        clipBehavior: Clip.hardEdge,
-        child: CustomPaint(
-          size: Size(constraints.maxWidth, height),
-          painter: _RevolvingLanternPainter(_painter, textInfo),
-        ),
-      );
-    });
+    return Scaffold(
+      body: Center(
+        child: LayoutBuilder(builder: (_, constraints) {
+          return ClipRect(
+            clipBehavior: Clip.hardEdge,
+            child: CustomPaint(
+              size: Size(constraints.maxWidth, height),
+              painter: _RevolvingLanternPainter(_painter, textInfo),
+            ),
+          );
+        }),
+      ),
+    );
   }
 
   double get screenWidth => MediaQuery.of(context).size.width;
